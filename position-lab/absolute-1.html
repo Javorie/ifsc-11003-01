@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positioning Lab</title>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: #ECECEC;
+    font-weight: bold;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #FFF;
+    text-align: center;
+    line-height: 24px;
+    height: 100vh;
+    position: relative;
+  }
+
+  h1 {
+    color: #000;
+    font-weight: normal;
+    padding: 40px 0 20px;
+    margin: 0;
+    font-size: 40px;
+  }
+
+  /* THINNER RECTANGLE */
+  #wrapper {
+    background-color: #FFF;
+    border: 1px solid #c0c0c0;
+    width: 50%;          /* slightly skinnier */
+    height: 200px;       /* shorter rectangle */
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+    text-shadow: 2px 2px #000;
+  }
+
+  /* CORNER BOXES ALREADY GOOD */
+  #navy, #teal, #blue, #aqua {
+    width: 120px;
+    height: 120px;
+    padding-top: 12px;
+    position: absolute;
+    text-shadow: 2px 2px #000;
+    font-size: 18px;
+  }
+
+  #navy {
+    background-color: #001f3f;
+    top: 0;
+    left: 0;
+  }
+
+  #teal {
+    background-color: #39CCCC;
+    top: 0;
+    right: 0;
+  }
+
+  #blue {
+    background-color: #0074D9;
+    bottom: 0;
+    left: 0;
+  }
+
+  #aqua {
+    background-color: #7FDBFF;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* SMALLER GREY SQUARE */
+  #footer {
+    width: 120px;     /* smaller */
+    height: 120px;    /* still a square */
+    background-color: #666;
+    position: absolute;
+    top: 40px;        /* slightly adjusted */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 15px;
+    text-shadow: 2px 2px #000;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Exercise</h1>
+
+<!-- Corner boxes -->
+<div id="navy">Navy</div>
+<div id="teal">Teal</div>
+
+<section id="wrapper">
+  <div id="footer">Footer</div>
+</section>
+
+<div id="blue">Blue</div>
+<div id="aqua">Aqua</div>
+
+</body>
+</html>

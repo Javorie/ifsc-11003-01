@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Two Column Left</title>
+
+  <style>
+    /* Box Sizing */
+    html {
+      box-sizing: border-box;
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #f7f7f7;
+      font-family: Avenir, Montserrat, Corbel, "URW Gothic", sans-serif;
+    }
+
+    /* MAIN GRID */
+    main {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Default block styling */
+    main > * {
+      background: #c0c0c0;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    /* HEADER spans both columns */
+    header.primary {
+      grid-column: 1 / 3;
+    }
+
+    /* FOOTER spans both columns */
+    footer.primary {
+      grid-column: 1 / 3;
+    }
+
+    /* ASIDE is left column only, spanning down */
+    aside {
+      grid-row: 2 / 4;
+    }
+
+    /* CONTENT area (top right) */
+    #content {
+      grid-column: 2 / 3;
+    }
+
+    /* BLOG area (bottom right) */
+    #blog {
+      grid-column: 2 / 3;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <header class="primary">
+      <h1>Site Header</h1>
+    </header>
+
+    <aside>
+      <h2>Aside</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
+    </aside>
+
+    <section id="content">
+      <header>
+        <h2>#Content Section Header</h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
+      <footer>Section Footer</footer>
+    </section>
+
+    <section id="blog">
+      <header>
+        <h2>#Blog Section Header</h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
+      <footer>Section Footer</footer>
+    </section>
+
+    <footer class="primary">Site Footer</footer>
+
+  </main>
+</body>
+</html>

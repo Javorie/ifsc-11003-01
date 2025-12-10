@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Positioning Lab — scaled</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #ECECEC;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  header h1 {
+    color: #000;
+    font-weight: 400;
+    font-size: 36px;
+  }
+
+  /* scaled wrapper */
+  #wrapper {
+    width: 600px;
+    height: 600px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    position: relative;
+  }
+
+  /* scaled corner boxes */
+  #navy, #teal, #blue, #aqua {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    text-shadow: 2px 2px #000;
+    font-size: 16px;
+  }
+
+  #navy { background: #001f3f; top: 0; left: 0; }
+  #teal { background: #39CCCC; top: 0; right: 0; }
+  #blue { background: #0074D9; bottom: 0; left: 0; }
+  #aqua { background: #7FDBFF; bottom: 0; right: 0; }
+
+  /* scaled footer box */
+  #footer {
+    width: 110px;
+    height: 110px;
+    background: #666;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    text-shadow: 2px 2px #000;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Exercise</h1>
+</header>
+
+<section id="wrapper">
+  <div id="navy">Navy</div>
+  <div id="teal">Teal</div>
+  <div id="blue">Blue</div>
+  <div id="aqua">Aqua</div>
+  <div id="footer">Footer</div>
+</section>
+
+</body>
+</html>
